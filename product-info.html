@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>eMercado - Todo lo que busques está aquí</title>
+
+ <!-- LINK FUENTES E ICONOS -->
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ <!-- LINK BOOTSTRAP -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- FUENTE -->
+<link rel="stylesheet" href="css/font.css" />
+<!-- ESTILOS ESPECIFICOS-->
+<link rel="stylesheet" href="css/product-info.css">
+<!-- ESTILOS INPUTS -->
+<link rel="stylesheet" href="css/styles-input.css">
+<!-- ESTILOS GENERALES -->
+<link href="css/styles.css" rel="stylesheet">
+<!--  MODO OSCURO -->
+<link rel="stylesheet" href="css/darkmode.css">
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-lg">
+      <a class="navbar-brand" href="index.html"><img src="img/logo-eco.png" id="logo-eco" class="logo-eco" width="80"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+        </ul>
+        <div id="menu-placeholder"></div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+    <div id="product-container">
+      <div class="product-details-container">
+        <div class="product-images-container">
+          <div class="miniaturas-container">
+            <!--IMAGENES MINIATURA-->
+          </div>
+          <!--IMAGEN GRANDE-->
+        </div>
+        <div class="product-detail-card">
+          <div class="product-name">
+           <!--NOMBRE-->
+          </div>
+          <div class="product-description">
+            <div class="description-title">Descripción</div>
+            <!--DESCRIPCION-->
+          </div>
+          <div class="product-category">
+            <div class="category-title">Categoría</div>
+            <!--CATEGORIA-->
+            <div class="product-quantity">
+              <div >
+                <span>Cant.</span>
+                <span class="product-count"></span>
+                <!--CANTIDAD DE VENDIDOS-->
+                <span>artículos</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-cost">
+            <!--PRECIO-->
+          </div>
+          <div class="buttons-container">
+            <button class="button-text buy-button" id="btnComprar">Comprar</button>
+            <button class="button-text add-to-cart-button" id="cart-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" href="#offcanvasExample"  role="button" aria-controls="offcanvasExample">Añadir al carrito</button>    
+          </div>   
+        </div>   
+      </div>
+    </div>
+
+    <!-- OFFcanvas -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title offcanvas-text" id="offcanvasExampleLabel"> ¡El producto está en el carrito!</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body"> 
+        <div class="dropdown mt-3">
+          <p class="offcanvas-text">¿Quieres ver tus productos agregados?</p>
+          <button class="button" type="button" onclick="irAlCarrito()">
+            Ir al carrito
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- AGREGAR COMENTARIOS -->
+    <div class="add-comments-container">
+      <h4 class="add-rating-title">Deja tu reseña sobre este producto</h4>
+      <div class="add-rating">
+        <h5 class="calification-title">Calificación: </h5>
+        <div class="add-rating-stars">
+          <span class="fa fa-star stars" data-value="1"></span>
+          <span class="fa fa-star stars" data-value="2"></span>
+          <span class="fa fa-star stars" data-value="3"></span>
+          <span class="fa fa-star stars" data-value="4"></span>
+          <span class="fa fa-star stars" data-value="5"></span>
+        </div>
+      </div>
+      <div class="calification-message-container">
+        <textarea class="calification-message" id="textArea" placeholder="Cuéntanos que te pareció este producto..."></textarea>
+        <p id="message" style="color:#2a49ff; display: none;">Se agregó la calificacion</p>
+      </div>
+     
+      <div class="send-calification-container">
+        <button class="send-calification" >ENVIAR</button>
+      </div>
+    </div>
+
+    <!--LISTA DE COMENTARIOS -->
+    <h4 class="rating-title">¿Qué piensan nuestros usuarios?</h4>
+    <div id="comments-container" class="comments-box"></div>
+    <!-- PRODUCTOS RELACIONADOS -->
+    <div id="related-products-container"></div>
+    
+    <div class="go-top-container">
+      <div class="go-top-button">
+        <i class="fas fa-chevron-up"></i>
+      </div>  
+    </div>
+  </main>
+ <!-- FOOTER -->
+  <footer class="text-muted">
+    <div class="container-footer">
+      <div style="text-align: left">
+        <a href="#"><img src="img/logo-eco.png" width="80"></a>
+      </div>
+      <img class="footer-jap-logo" src="img/Footer.png" alt="Logo Jovenes a programar">
+    </div>
+  </footer>
+
+  <!-- SPINNER -->
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+
+  
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/product-info.js"></script>
+  
+</body>
+
+</html>
+
