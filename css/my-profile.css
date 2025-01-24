@@ -1,0 +1,97 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--Medium-gray, #6E7591);
+
+  /* Label */
+  font-family: Mulish;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.5px;
+}
+
+.user-profile-container {
+    font-family: 'Mulish';
+    margin-top: 100px;
+    padding: 60px 90px 5px 90px;
+    border-radius: 15px; 
+    background: #EBEEFF;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.form-control {
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: #FFF8F8;
+  border: 0;
+  display:inline!important;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  margin: 20px auto; /* Centra el botón */
+  text-align: center;
+  padding: 16px 40px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 40px;
+background: var(--Gradient-primary-button, #3969FC);
+
+/* shadow */
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+}
+
+#profile-icon {
+    position: absolute;
+    left: 50%; /* Posiciona horizontalmente el ícono al 50% */
+    transform: translateX(-50%); /* Ajuste para centrar exactamente */
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-icon {
+    left: 0px;
+    width: 157px;
+    height: 157px;
+    object-fit: cover;
+    border-radius: 92px;
+}
+
+.edit-icon {
+  position: absolute;
+  top: 0px;
+  left: 152px;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.icon-border {
+    position: absolute;
+    width: 187px;
+    height: 187px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+label.required::after {
+  content: " *"; /* Asterisco */
+  color: red;    /* Color rojo */
+  font-weight: bold; /* Negrita si quieres que resalte más */
+}
+
+
+
+

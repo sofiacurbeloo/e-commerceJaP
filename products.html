@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <title>eMercado - Todo lo que busques está aquí</title>
+  <!-- LINK FUENTES -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet"/>
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- LINK BOOTSTRAP -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- ESTILOS GENERALES -->
+  <link href="css/styles.css" rel="stylesheet" />
+  <!-- FUENTE -->
+  <link rel="stylesheet" href="css/font.css">
+  <!--  -->
+  <link rel="stylesheet" href="css/styles-input.css">
+  <!-- MODO OSCURO -->
+  <link rel="stylesheet" href="css/darkmode.css">
+  
+  
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-lg">
+      <a class="navbar-brand" href="index.html"><img src="img/logo-eco.png" width="80"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+        </ul>
+        <div id="menu-placeholder"></div>
+      </div>
+    </div>
+  </nav>  
+
+  <!-- MAIN -->
+  <main id='products-main'>
+      <!-- TITLE -->
+    <div class="h2-container">
+      <div class="title-decoration">
+        <h2 class="h2"></h2>
+      </div>
+    </div>   
+    <!-- FILTROS Y BUSCADOR -->
+    <div id='search-input'>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M21.0002 21L16.6572 16.657M16.6572 16.657C17.4001 15.9141 17.9894 15.0322 18.3914 14.0615C18.7935 13.0909 19.0004 12.0506 19.0004 11C19.0004 9.94939 18.7935 8.90908 18.3914 7.93845C17.9894 6.96782 17.4001 6.08588 16.6572 5.34299C15.9143 4.6001 15.0324 4.01081 14.0618 3.60877C13.0911 3.20672 12.0508 2.99979 11.0002 2.99979C9.9496 2.99979 8.90929 3.20672 7.93866 3.60877C6.96803 4.01081 6.08609 4.6001 5.34321 5.34299C3.84288 6.84332 3 8.87821 3 11C3 13.1218 3.84288 15.1567 5.34321 16.657C6.84354 18.1573 8.87842 19.0002 11.0002 19.0002C13.122 19.0002 15.1569 18.1573 16.6572 16.657Z" stroke="#99A8FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <input type="search" id="product-search" name="q" placeholder="Escribe aquí tu búsqueda..." />
+      <button id="search-button" class='primary-button'>Buscar</button>
+    </div>
+
+    <div id="sort-and-filter">  
+      <!-- FILTER -->
+      <div class="filters">
+        <div>
+          <p class="font-weight-normal text-end my-2">Cant.</p>
+        </div>
+        <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin"/>
+        <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax"/>
+        <div class="col">
+          <div class="btn-group" role="group">
+            <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
+            <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
+          </div>
+        </div>
+      </div>
+      <!-- SORT -->
+      <div class="sorting">
+        <div class="btn-group btn-group-toggle mb-4" data-bs-toggle="buttons">
+          <input type="radio" class="btn-check" name="options" id="sortAsc"/>  
+          <label class="btn btn-light" for="sortAsc"><i class="fas fa-sort-amount-down me-1"></i> $ </label> 
+          <input type="radio" class="btn-check" name="options" id="sortDesc"/>  
+          <label class="btn btn-light" for="sortDesc"><i class="fas fa-sort-amount-up"></i> $ </label> 
+          <input type="radio" class="btn-check" name="options" id="sortByRelevance" checked/>  
+          <label class="btn btn-light" for="sortByRelevance"><i class="fas fa-sort-amount-down me-1"></i> Rel.</label>  
+        </div>  
+      </div>
+    </div>
+
+    <!-- PRODUCTOS -->
+    <div id="product-list">
+      <!--LISTA PRODUCTOS-->
+    </div> 
+    <p id="noResultsMessage" class='body-light' style="display: none">No se encontraron resultados para tu búsqueda.</p>
+      
+    <div class="go-top-container">
+      <div class="go-top-button">
+        <i class="fas fa-chevron-up"></i>
+      </div>  
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="text-muted">
+    <div class="container-footer">
+      <div style="text-align: left">
+        <a href="#"><img src="img/logo-eco.png" width="80"></a>
+      </div>
+      <img class="footer-jap-logo" src="img/Footer.png" alt="Logo Jovenes a programar">
+    </div>
+  </footer>
+
+  <!-- SPINNER -->
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div>
+    </div>
+
+    <!-- SCRIPTS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/products.js"></script>
+  
+
+</body>
+</html>

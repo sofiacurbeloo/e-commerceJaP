@@ -1,0 +1,173 @@
+/* Modo oscuro */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    transition: background-color 0.5s ease;
+}
+
+body.active {
+    --Black: #fafbff;
+    color: #fafbff;
+    --Medium-gray: #fafbff;
+    background-color: #131313; /* Fondo oscuro */
+
+}
+
+/* Estilos específicos para product-info */
+body.active,
+body.active #product-container,
+body.active .product-detail-card,
+body.active .add-comments-container,
+body.active .calification-message,
+body.active #comments-container,
+body.active .card {
+    color: white; /* Texto en blanco */
+}
+
+/* Estilos específicos para product-detail-card */
+body.active .product-detail-card,
+body.active #comments-container,
+body.active .add-comments-container,
+body.active .card,
+body.active .offcanvas {
+    background-color: #292929;
+    border: 1px solid #444;
+}
+body.active .calification-message {
+    background-color: #131313;
+    border: 1px solid #444;
+}
+body.active .product-detail-card .description-title,
+body.active .product-detail-card .category-title,
+body.active .product-detail-card .product-name-title,
+body.active .product-detail-card .description-text,
+body.active .offcanvas .offcanvas-text {
+    color: #ffffff;
+}
+body.active .add-to-cart-button{
+    color: #1e1e1e;
+}
+
+/* Estilos específicos para my-profile */
+
+body.active #profile-icon .icon-border,
+body.active #profile-icon .edit-icon {
+    filter: invert(100%); 
+}
+
+body.active .user-profile-container {
+    background-color: #1e1e1e;
+}
+
+body.active input, 
+body.active .form-control {
+    background-color: #333;
+    color: #fafbff;
+    border: 1px solid #555;
+}
+
+/* Estilos específicos para categories*/
+body.active .list-group-item,
+body.active .btn {
+    background-color: #333;
+    color: #fafbff;
+    border: 1px solid #555;
+}
+body.active .img-thumbnail {
+    background-color: #1e1e1e;
+}
+
+/* Estilos específicos para index*/
+body.active .card-content {
+    background-color: #333;
+    color: #fafbff;
+    border: 1px solid #555;
+}
+body.active .card-content:hover,
+.more-btn-box:hover {
+  box-shadow: 4px 4px 4px 0px rgba(22, 25, 28, 0.25);
+  background: #e685f2;
+  color:#131313;
+}
+body.active .outline-button {
+    background-color: #333;
+    color: #fafbff;
+}
+body.active .outline-button:hover {
+    background-color:#2a49ff;
+    color: #fafbff;
+}
+
+
+/* Estilos específicos para products*/
+body.active #product-search {
+    background-color: #333;
+    color: #fafbff;
+    border: 1px solid #555;
+}
+
+
+
+
+/* Estilos para el botón de modo oscuro */
+.dark-mode {
+    width: 50px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    border-radius: 999px;
+    background-color: #dfdede;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+body.active .dark-mode {
+    background-color: white;
+}
+
+.dark-mode .circle {
+    width: 40%;
+    height: 80%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    transform: translate(10%);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+body.active .circle {
+    transform: translateX(140%);
+    background-color: #2a2a2c;
+}
+
+.dark-mode .circle ion-icon {
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    transition: transform 0.5s ease;
+}
+
+.dark-mode .circle .moon {
+    color: white;
+    transform: translateY(-120%);
+}
+
+body.active .circle .moon {
+    transform: translateX(0);
+}
+
+.dark-mode .circle .sun {
+    color: #fcde5b;
+}
+
+body.active .circle .sun {
+    transform: translateY(120%);
+}

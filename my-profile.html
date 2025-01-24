@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>eMercado - Todo lo que busques está aquí</title>
+  <!-- FUENTE E ICONOS -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- BOOTSTRAP -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- ESTILOS ESPECÍFICOS -->
+  <link rel="stylesheet" href="css/my-profile.css">
+  <!-- ESTILOS GENERALES -->
+  <link href="css/styles.css" rel="stylesheet">
+  <!-- ESTILOS INPUTS -->
+  <link rel="stylesheet" href="css/styles-input.css">
+  <!--MODO OSCURO  -->
+  <link rel="stylesheet" href="css/darkmode.css">
+ 
+
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-lg">
+      <a class="navbar-brand" href="index.html"><img src="img/logo-eco.png" id="logo-eco" class="logo-eco" width="80"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+        </ul>
+       
+        <div class="dark-mode">
+          <div class="circle">
+            <ion-icon class="sun" name="sunny"></ion-icon>
+            <ion-icon class="moon" name="moon"></ion-icon>
+          </div>
+        </div>
+        <div id="menu-placeholder"></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+    <section class="user-profile">
+      <div id="profile-icon">
+        <img class="icon-border" src="img/user-icon-border.png"/>
+        <img class="user-icon" id="profile-picture" src="img/user-icon-generic.png" />
+        <img class="edit-icon" id="change-picture-icon" alt="" src="img/edit-user-icon.png">
+        <input type="file" id="fileInput" style="display:none" accept="image/*">
+      </div>
+    <div class="user-profile-container">
+      <form>
+          <div class="form-group required">
+              <label for="firstName" class="required">Nombre:</label>
+              <input type="text" class="form-control required" id="firstName" required>
+          </div>
+          <div class="form-group ">
+              <label for="secondName">Segundo nombre:</label>
+              <input type="text" class="form-control" id="secondName">
+          </div>
+          <div class="form-group">
+              <label for="lastName" class="required">Apellido:</label>
+              <input type="text" class="form-control" id="lastName" required>
+          </div>
+          <div class="form-group">
+              <label for="secondLastName">Segundo apellido:</label>
+              <input type="text" class="form-control" id="secondLastName">
+          </div>
+          <div class="form-group">
+              <label for="email" class="required">E-mail:</label>
+              <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="form-group">
+              <label for="phone">Teléfono:</label>
+              <input type="tel" class="form-control" id="phone">
+          </div>
+          <button type="submit" class="btn btn-primary">Guardar cambios</button>
+      </form>
+    </div>
+    <div class="go-top-container">
+      <div class="go-top-button">
+        <i class="fas fa-chevron-up"></i>
+      </div>  
+    </div>
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="text-muted">
+    <div class="container-footer">
+      <div style="text-align: left">
+        <a href="#"><img src="img/logo-eco.png" width="80"></a>
+      </div>
+      <img class="footer-jap-logo" src="img/Footer.png" alt="Logo Jovenes a programar">
+    </div>
+  </footer>
+  
+  <!-- SCRIPTS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/my-profile.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+</body>
+
+</html>
